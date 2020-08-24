@@ -30,4 +30,4 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 
 ## Contact
 
-This wrapper was written by Max Stammnitz, Transmissible Cancer Group (2020), with Unix inspiration from Adrian Baez-Ortega, Wellcome Sanger Institute (@baezortega) and lots of svimmer/Graphtyper support from Hannes Eggertson, deCODE Genetics (@hannespetur). Please get in touch if there are any issues: maxrupsta {at} gmail.com
+This wrapper was written by Max Stammnitz, Transmissible Cancer Group (2020), with Unix inspiration from Adrian Baez-Ortega, Wellcome Sanger Institute (@baezortega) and svimmer/Graphtyper testing support from Hannes Eggertson, deCODE Genetics (@hannespetur). Please get in touch if there are any issues: maxrupsta {at} gmail.com
