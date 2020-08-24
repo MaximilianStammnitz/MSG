@@ -1,7 +1,7 @@
 MSG
 =========
 
-![MSG](/images/msv.png)
+![MSG](MSG.png)
 
 ### Wrapper script for structural variant calling and genotyping
 
