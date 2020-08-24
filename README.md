@@ -12,9 +12,9 @@ This workflow:
 * follows the recommendations by [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)
 * has been recently employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
 
-In the Transmissible Cancer Group, we rely on this pipeline because of our observation of comparably low false-negative genotyping rates with respect to input SV sets across multiple samples. In addition, we find that SV variant allele frequency estimates are reliable - in the sense that they match tumour purity and allelic copy number expectations derived from orthogonal SNV analyses.
+In the Transmissible Cancer Group, we rely on MSG because of our observation of comparably low false-negative genotyping rates with respect to input SV sets across multiple close-related samples. In addition, we find that SV variant allele frequency estimates are reliable in the sense that they match tumour purity and locus-specific copy number estimates derived from orthogonal SNV analyses.
 
-MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution, and has a checkpoint implementation for resumptions after steps (1) and (2). Moreover, thanks to both Manta's and Graphtyper's parallelised implementation runtimes can be substantially reduced by the specification of multiple computing nodes.
+MSG is a wrapper script written in GNU Bash, and has been tested extensively on Ubuntu (18.04) systems. It should work well on other Linux distributions, and has a checkpoint flag implementation for resumptions after steps (1) and (2). Moreover, thanks to both Manta's and Graphtyper's parallelised implementation, runtimes can be substantially reduced by the specification of multiple computing nodes (if available).
 
 
 ---
