@@ -1,9 +1,9 @@
 MSG
 =========
 
-![MSG](MSG.png)
-
 ### Wrapper script for structural variant calling and genotyping
+
+![MSG](MSG.png)
 
 __Max Stammnitz  
 Transmissible Cancer Group, University of Cambridge__
@@ -29,7 +29,3 @@ The following tools need to be installed and placed in your $PATH environment, i
 * [Manta v1.6.0 convertInversion.py](https://github.com/Illumina/manta/blob/master/src/python/libexec/convertInversion.py)
 * [svimmer v0.1](https://github.com/DecodeGenetics/svimmer/releases/tag/v0.1)
 * [Graphtyper v2.5.1](https://github.com/DecodeGenetics/graphtyper/releases/tag/v2.5.1)
-
----
-
-## Dependencies
