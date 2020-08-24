@@ -8,7 +8,7 @@ MSG is an open-source wrapper that makes use of the powerful structural variant 
 This workflow:
 * facilitates high-resolution SV discovery, breakpoint reassembly, genotyping and variant allele frequency inference from Illumina paired-end data
 * is highly suitable the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
-* has been tested extensively on >512 Mb marsupial chromosomes (with great support from Hannes Eggertson)
+* has been tested extensively on >512 Mb marsupial chromosomes
 * follows the recommendations by [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)
 * has recently been employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
 
@@ -30,4 +30,4 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 
 ## Contact
 
-This wrapper was written by Max Stammnitz, Transmissible Cancer Group (2020), with Unix inspiration from Adrian Baez-Ortega, Wellcome Sanger Institute (@baezortega) and svimmer/Graphtyper testing support from Hannes Eggertson, deCODE Genetics (@hannespetur). Please get in touch if there are any issues: maxrupsta {at} gmail.com
+This wrapper was written by Max Stammnitz, Transmissible Cancer Group (2020), with some UNIX inspirations from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute (@baezortega) and svimmer/Graphtyper testing support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics. Please get in touch if there are any issues: maxrupsta {at} gmail.com
