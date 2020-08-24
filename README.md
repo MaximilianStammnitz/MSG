@@ -32,7 +32,7 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 
 ## Running MSG
 
-A run of MSG requires the following inputs:
+A run of MSG.sh requires the following inputs:
 * list with absolute paths to indexed BAMs for SV discovery (-d)
 * list with absolute paths to indexed BAMs for SV genotyping (-g)
 * reference genome FASTA (-r)
