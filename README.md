@@ -33,12 +33,12 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 ## Running MSG
 
 A run of MSG requires the following inputs:
-* list with absolute paths to indexed BAMs for SV calling
-* list with absolute paths to indexed BAMs for SV genotyping
-* reference genome FASTA
-* path to the global output folder
-* region file
-* number of CPUs
+* list with absolute paths to indexed BAMs for SV discovery (-d)
+* list with absolute paths to indexed BAMs for SV genotyping (-g)
+* reference genome FASTA (-r)
+* path to the global output folder (-g)
+* region window file (-w)
+* number of CPUs (-c)
 
 
 ---
