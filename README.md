@@ -5,7 +5,7 @@ MSG - Wrapper for SV calling and genotyping
 
 MSG is an open-source wrapper that makes use of the powerful structural variant caller [**M**anta](https://github.com/Illumina/manta) ([Chen et al., 2016](https://academic.oup.com/bioinformatics/article/32/8/1220/1743909)) for identifying germline and somatic SVs in sequencing data of unpaired samples, as well as the [**S**vimmer](https://github.com/DecodeGenetics/svimmer) and [**G**raphtyper](https://github.com/DecodeGenetics/graphtyper) frameworks for SV merging and genotyping, by use of variation graphs ([Eggertson et al., 2017](https://www.nature.com/articles/ng.3964); [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)).
 
-This workflow...
+This workflow:
 * facilitates high-resolution SV discovery, breakpoint reassembly, genotyping and variant allele frequency inference from Illumina paired-end data
 * is highly suitable the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
 * has been tested extensively on >512 Mb marsupial chromosomes (with great support from Hannes Eggertson)
