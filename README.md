@@ -14,7 +14,7 @@ This workflow:
 
 In the Transmissible Cancer Group, we rely on this pipeline because of our observation of comparably low false-negative genotyping rates with respect to input SV sets across multiple samples. In addition, we find that SV variant allele frequency estimates are reliable - in the sense that they match tumour purity and allelic copy number expectations derived from orthogonal SNV analyses.
 
-MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution, and has a checkpoint implementation for resumptions after steps (1) and (2). Moreover thanks to both Manta's and Graphtyper's parallelised implementation, runtimes can be substantially reduced by the specification of multiple computing nodes.
+MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution, and has a checkpoint implementation for resumptions after steps (1) and (2). Moreover, thanks to both Manta's and Graphtyper's parallelised implementation runtimes can be substantially reduced by the specification of multiple computing nodes.
 
 
 ---
@@ -26,6 +26,19 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 * [Manta v1.6.0 convertInversion.py](https://github.com/Illumina/manta/blob/master/src/python/libexec/convertInversion.py)
 * [svimmer v0.1](https://github.com/DecodeGenetics/svimmer/releases/tag/v0.1)
 * [Graphtyper v2.5.1](https://github.com/DecodeGenetics/graphtyper/releases/tag/v2.5.1)
+
+
+---
+
+## Running MSG
+
+A run of MSG requires the following inputs:
+* list with absolute paths to indexed BAMs for SV calling
+* list with absolute paths to indexed BAMs for SV genotyping
+* reference genome FASTA
+* path to the global output folder
+* region file
+* number of CPUs
 
 
 ---
