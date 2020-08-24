@@ -7,12 +7,12 @@ MSG is an open-source wrapper that makes use of the powerful structural variant 
 
 This workflow:
 * facilitates high-resolution SV discovery, breakpoint reassembly, genotyping and variant allele frequency inference from Illumina paired-end shotgun deep sequencing data of whole genomes (> 30X)
-* is highly suitable the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
-* has been optimised for >512 Mb marsupial chromosomes, via CSI indexing support
+* is highly suitable for the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
+* has been benchmarked for >512 Mb chromosomes, via CSI indexing support
 * follows the recommendations by [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)
-* has recently been employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
+* has been recently employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
 
-In the Transmissible Cancer Group, we rely on this pipeline because of our observation of *low false-negative genotyping rates* with respect to input SV sets across multiple samples, in addition to reliable variant allele frequency estimates that match tumour purity expectations derived from orthogonal SNV analysis.
+In the Transmissible Cancer Group, we rely on this pipeline because of our observation of comparably low false-negative genotyping rates with respect to input SV sets across multiple samples. In addition, we find that SV variant allele frequency estimates are reliable - in the sense that they match tumour purity and allelic copy number expectations derived from orthogonal SNV analyses.
 
 MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution, and has a checkpoint implementation for resumptions after steps (1) and (2).
 
