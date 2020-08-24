@@ -7,7 +7,7 @@ MSG is an open-source wrapper that makes use of the powerful structural variant 
 
 This workflow:
 * facilitates high-resolution SV discovery, breakpoint reassembly, genotyping and variant allele frequency inference from Illumina paired-end shotgun deep sequencing data of whole genomes (> 30X)
-* is highly suitable for the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
+* is suitable for the genomic studies of asexually evolving genomes, such as the somatic tracing of cancer and normal tissue clones
 * has been benchmarked for >512 Mb chromosomes, via CSI indexing support
 * follows the recommendations by [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)
 * has been recently employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
