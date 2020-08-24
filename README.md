@@ -12,7 +12,9 @@ This workflow:
 * follows the recommendations by [Eggertson et al., 2019](https://www.nature.com/articles/s41467-019-13341-9)
 * has recently been employed to study structural variation across hundreds of humans ([Almarri et al., 2020](https://doi.org/10.1016/j.cell.2020.05.024))
 
-In the Transmissible Cancer Group, we rely on this pipeline because of our observation of *low false-negative genotyping rates* with respect to input SV sets across multiple samples, in addition to reliable variant allele frequency estimates. MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution.
+In the Transmissible Cancer Group, we rely on this pipeline because of our observation of *low false-negative genotyping rates* with respect to input SV sets across multiple samples, in addition to reliable variant allele frequency estimates that match tumour purity expectations derived from orthogonal SNV analysis.
+
+MSG is a wrapper script written in GNU Bash, and has been tested on Ubuntu (18.04) systems. It should work well on any Linux distribution, and has a checkpoint implementation for resumptions after steps (1) and (2).
 
 
 ---
@@ -30,4 +32,4 @@ The following tools/scripts need to be installed and placed in your $PATH enviro
 
 ## Contact
 
-This wrapper was written by Max Stammnitz, Transmissible Cancer Group (2020), with some UNIX inspirations from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute and svimmer/Graphtyper testing support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics. Please get in touch if there are any issues: maxrupsta {at} gmail.com
+This script was written by Max Stammnitz, Transmissible Cancer Group (2020), with some UNIX inspirations from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute and svimmer/Graphtyper testing support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics. Please get in touch if there are any issues: maxrupsta {at} gmail.com
