@@ -76,6 +76,8 @@ individual_calling() {
         mkdir -p $OUTDIR/1_individual_calls/$NAME
 
         # Configure Manta run with the default settings
+
+	## needs adaptation, specify chromosomes based on region or .FAI 
         configManta.py \
         --tumorBam $FILE \
         --referenceFasta $REFERENCE \
@@ -100,7 +102,13 @@ merge_calls() {
 
         cp $OUTDIR/1_individual_calls/$FILE/results/variants/tumorSV.vcf.gz $OUTDIR/2_merge/${FILE}_manta.vcf.gz
 	gunzip $OUTDIR/2_merge/${FILE}_manta.vcf.gz
-	### run convertInversions.py ###
+
+	### test ###
+	SAMT=$(which samtools)
+	convertInversion.py $SAMT $REFERENCE ${FILE}_manta.vcf > ${FILE}_manta_inv.vcf
+	mv ${FILE}_manta_inv.vcf ${FILE}_manta.vcf
+	### check ###
+
 	bgzip -c $OUTDIR/2_merge/${FILE}_manta.vcf > $OUTDIR/2_merge/${FILE}_manta.vcf.gz
         tabix -C -p vcf $OUTDIR/2_merge/${FILE}_manta.vcf.gz
 
@@ -115,7 +123,7 @@ merge_calls() {
     --ids \
     --output $OUTDIR/2_merge/SVs_manta_merged.vcf \
     --max_distance 500 \
-    1 2 3 4 5 6 X Y CACPPN010000001.1 ### needs adaptation, specify chromosomes manually
+    1 2 3 4 5 6 X Y CACPPN010000001.1 ### needs adaptation, specify chromosomes based on region or .FAI
 
 }
 
@@ -139,7 +147,7 @@ genotype_calls() {
     $REFERENCE \
     $OUTDIR/2_merge/SVs_manta_merged.sorted.vcf.gz \
     --sams=$OUTDIR/3_genotyped/input_genotyping.txt \
-    --output=$OUTDIR/3_genotyped/SVomatypus_out \
+    --output=$OUTDIR/3_genotyped/MSG_out \
     --region_file=$REGIONS \
     --csi \
     --verbose \
@@ -201,7 +209,7 @@ while getopts "d:g:r:w:o:c:p:hv?" OPT; do
       exit 0
       ;;
     v)
-      echo "SVomatypus $VERSION"
+      echo "MSG $VERSION"
       exit 0
       ;;
     \?)
@@ -299,9 +307,9 @@ done < $GENO
 # START RUNNING
 # Copy all standard out and standard error to log file
 mkdir -p $OUTDIR/logs
-exec &> >(tee -ia $OUTDIR/logs/SVomatypus_`date +"%y%m%d%H%M"`.log)
+exec &> >(tee -ia $OUTDIR/logs/MSG_`date +"%y%m%d%H%M"`.log)
 
-echo -e "\nThis is SVomatypus $VERSION\n"
+echo -e "\nThis is MSG $VERSION\n"
 echo "Input BAM list for SV calling:      $CALL"
 echo "Input BAM list for SV genotyping:   $GENO"
 echo "Input reference genome:             $REFERENCE"
@@ -361,7 +369,7 @@ if [ "$STEP" -lt 3 ]; then
     genotype_calls
 
     # Check successful execution
-    check_file $OUTDIR/3_genotyped/SVomatypus_out
+    check_file $OUTDIR/3_genotyped/MSG_out
 
     # Update checkpoint file
     echo -e "\nSuccess"
@@ -371,4 +379,4 @@ fi
 
 echo -e "\nExecution finished on `date`"
 echo -e "\nALL DONE!"
-echo -e "Output is in: $OUTDIR/SVomatypus_out\n"
+echo -e "Output is in: $OUTDIR/MSG_out\n"
