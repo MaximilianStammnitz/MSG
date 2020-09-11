@@ -36,7 +36,7 @@ A run of MSG.sh requires the following inputs:
 * list with absolute paths to indexed BAMs for SV discovery (-d)
 * list with absolute paths to indexed BAMs for SV genotyping (-g)
 * reference genome FASTA (-r)
-* path to the global output folder (-g)
+* path to the global output folder (-o)
 * region window file (-w)
 * number of CPUs (-c)
 
