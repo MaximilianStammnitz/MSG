@@ -22,8 +22,7 @@ MSG is a wrapper script written in GNU Bash, and has been tested extensively on 
 ## Dependencies
 
 The following tools/scripts need to be installed and placed in your $PATH environment, in addition to Python v2.6+, tabix, vcf-sort, vcf-concat and bgzip:
-* [Manta v1.6.0 (dev branch)](https://github.com/MaximilianStammnitz/MSG/blob/master/manta-1.6.0.tar.bz2)
-* [convertInversion.py](https://github.com/Illumina/manta/blob/master/src/python/libexec/convertInversion.py)
+* [Manta v1.6.0 (dev branch, contains convertIntervion.py)](https://github.com/MaximilianStammnitz/MSG/blob/master/manta-1.6.0.tar.bz2)
 * [svimmer v0.1](https://github.com/DecodeGenetics/svimmer/releases/tag/v0.1)
 * [Graphtyper v2.5.1 (dev branch)](https://github.com/MaximilianStammnitz/MSG/blob/master/graphtyper)
 
