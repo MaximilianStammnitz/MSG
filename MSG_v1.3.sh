@@ -201,12 +201,13 @@ genotype_calls() {
 
 
 # Check that dependencies (Manta, svimmer, Graphtyper, tabix, vcf-sort, bgzip) are installed
-hash configManta.py 2>/dev/null || { echo -e "\nERROR: configManta.py command not found. Please install Manta (https://github.com/Illumina/manta) and add its ../bin directory to your PATH.\n" >&2; exit 1; }
+hash configManta.py 2>/dev/null || { echo -e "\nERROR: configManta.py command not found. Please install Manta (https://github.com/Illumina/manta) and add its directory to your PATH.\n" >&2; exit 1; }
 hash svimmer 2>/dev/null || { echo -e "\nERROR: svimmer command not found. Please install svimmer (https://github.com/DecodeGenetics/svimmer) and add its directory to your PATH.\n" >&2; exit 1; }
 hash graphtyper2.6.1-dev 2>/dev/null || { echo -e "\nERROR: graphtyper2.6.1-dev command not found. Please install GraphTyper2 (https://github.com/DecodeGenetics/graphtyper) and add its directory to your PATH.\n" >&2; exit 1; }
-hash tabix 2>/dev/null || { echo -e "\nERROR: tabix: command not found. Please install the SAMtools tabix package and add its directory to your PATH.\n" >&2; exit 1; }
-hash bgzip 2>/dev/null || { echo -e "\nERROR: bgzip: command not found. Please install the SAMtools tabix package and add its directory to your PATH.\n" >&2; exit 1; }
+hash tabix 2>/dev/null || { echo -e "\nERROR: tabix: command not found. Please install tabix and add its directory to your PATH.\n" >&2; exit 1; }
+hash bgzip 2>/dev/null || { echo -e "\nERROR: bgzip: command not found. Please install bgzip and add its directory to your PATH.\n" >&2; exit 1; }
 hash vcf-sort 2>/dev/null || { echo -e "\nERROR: vcf-sort: command not found. Please install VCFtools and add its directory to your PATH.\n" >&2; exit 1; }
+hash bcftools 2>/dev/null || { echo -e "\nERROR: bcftools: command not found. Please install bcftools and add its directory to your PATH.\n" >&2; exit 1; }
 
 # If no arguments (or -h): print help
 if [ "$#" -eq 0 ]; then
