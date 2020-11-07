@@ -24,14 +24,14 @@ MSG is a wrapper script written in GNU Bash, and has been tested extensively on 
 The following tools/scripts need to be installed and placed in your $PATH environment, in addition to Python v2.6+, tabix, vcf-sort, vcf-concat and bgzip:
 * [Manta v1.6.0 (dev branch, contains convertIntervion.py)](https://github.com/MaximilianStammnitz/MSG/blob/master/manta-1.6.0.tar.bz2)
 * [svimmer v0.1](https://github.com/DecodeGenetics/svimmer/releases/tag/v0.1)
-* [Graphtyper v2.5.1 (dev branch)](https://github.com/MaximilianStammnitz/MSG/blob/master/graphtyper)
+* [Graphtyper v2.6.1 (dev branch)](https://github.com/MaximilianStammnitz/MSG/blob/master/graphtyper2.6.1-dev)
 
 
 ---
 
 ## Running MSG
 
-A run of MSG_v1.2.sh requires the following inputs:
+A run of MSG_v1.3.sh requires the following inputs:
 * list with absolute paths to indexed BAMs for SV discovery (-d)
 * list with absolute paths to indexed BAMs for SV genotyping (-g)
 * reference genome FASTA (-r)
