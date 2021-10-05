@@ -2,7 +2,7 @@
 
 # MSG: streamlined (1) Manta, (2) svimmer and (3) GraphTyper2-based SV calling and genotyping
 # Max Stammnitz, Transmissible Cancer Group, University of Cambridge
-# 2020
+# 2021
 
 # MSG
 
@@ -155,9 +155,9 @@ genotype_calls() {
 
     # Launch GraphTyper2
     graphtyper2.6.1-dev genotype_sv \
-    --advanced \
     $REFERENCE \
     $OUTDIR/2_merge/SVs_manta_merged.sorted.vcf.gz \
+    --advanced \
     --sams=$GENO \
     --output=$OUTDIR/3_genotyped \
     --region_file=$REGIONS \
