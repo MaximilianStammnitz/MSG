@@ -167,26 +167,26 @@ genotype_calls() {
 
     # Summarise chromosome-wise results
     cut -f 1 -d ':' $OUTDIR/regions/regions.txt | uniq > $OUTDIR/regions/chroms.list
-    wc $OUTDIR/regions/chroms.list | cut -f 1 -d ' ' > $OUTDIR/regions/nchroms
+    wc -l $OUTDIR/regions/chroms.list | cut -f 1 -d ' ' > $OUTDIR/regions/nchroms
 
     if [ $OUTDIR/regions/nchroms = 1 ]; then
 
         while read chrom; do
-	   /software/common-apps/bcftools-1.9-220/bin/bcftools concat $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final.vcf
+	   bcftools concat $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final.vcf
 	done < $OUTDIR/regions/chroms.list
 
    else
 
 	head -n 1 $OUTDIR/regions/chroms.list > $OUTDIR/regions/chroms1
         while read chrom; do
-           /software/common-apps/bcftools-1.9-220/bin/bcftools concat $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final.vcf
+           bcftools concat $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final.vcf
         done < $OUTDIR/regions/chroms1
 	bgzip -c $OUTDIR/4_SVs_final.vcf > $OUTDIR/4_SVs_final.vcf.gz
         bcftools index -f -c $OUTDIR/4_SVs_final.vcf.gz
 
 	sed '1d' $OUTDIR/regions/chroms.list > $OUTDIR/regions/chroms2
 	while read chrom; do
-	   /software/common-apps/bcftools-1.9-220/bin/bcftools concat $OUTDIR/4_SVs_final.vcf.gz $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final_n.vcf
+	   bcftools concat $OUTDIR/4_SVs_final.vcf.gz $OUTDIR/3_genotyped/${chrom}/*.vcf.gz > $OUTDIR/4_SVs_final_n.vcf
 	   mv $OUTDIR/4_SVs_final_n.vcf $OUTDIR/4_SVs_final.vcf
 	   bgzip -c $OUTDIR/4_SVs_final.vcf > $OUTDIR/4_SVs_final.vcf.gz
 	   bcftools index -f -c $OUTDIR/4_SVs_final.vcf.gz
