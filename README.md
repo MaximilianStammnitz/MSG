@@ -44,6 +44,6 @@ A run of MSG_v1.3.sh requires the following inputs:
 
 ## Contact
 
-This script was written by Max Stammnitz, Transmissible Cancer Group (2020), with UNIX steals from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute and great svimmer/GraphTyper optimisation support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics.
+This script was written by Max Stammnitz, Transmissible Cancer Group (2020), with UNIX steals from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute and svimmer/GraphTyper optimisation support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics.
 
 Please get in touch if there are any issues: maxrupsta@gmail.com
