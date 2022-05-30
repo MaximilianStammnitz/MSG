@@ -47,3 +47,10 @@ A run of MSG_v1.3.sh requires the following inputs:
 This script was written by Max Stammnitz, Transmissible Cancer Group (2020), with UNIX steals from [Adrian Baez-Ortega](https://github.com/baezortega), Wellcome Sanger Institute and svimmer/GraphTyper optimisation support from [Hannes Eggertson](https://github.com/hannespetur), deCODE Genetics.
 
 Please get in touch if there are any issues: maxrupsta@gmail.com
+
+
+---
+
+## Citation
+
+If you can make good use of these functions in your work, I would be grateful for your citation of our associated preprint: **The evolution of two transmissible cancers in Tasmanian devils ([Stammnitz _et al._ 2022, bioRxiv](https://www.biorxiv.org/content/10.1101/2022.05.27.493404v1))**
